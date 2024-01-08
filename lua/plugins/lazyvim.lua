@@ -1,8 +1,5 @@
 return {
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      autoformat = false,
-    },
+    "neovim/nvim-lspconfig"
   },
 }
