@@ -15,5 +15,11 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+if vim.lsp.inlay_hint then
+  vim.keymap.set("n", "<leader>uh", function()
+    vim.lsp.inlay_hint(0, nil)
+  end, { desc = "Toggle Inlay Hints" })
+end
+
 map("n", "<C-q>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 map("n", "<C-e>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
